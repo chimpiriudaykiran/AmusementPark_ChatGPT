@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, jsonify, request, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
@@ -6,10 +8,11 @@ import datetime
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:UNTSE2024@172.208.119.202/amusementpark'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:''@127.0.0.1/amusementpark'
-CORS(app, support_credentials=True,origins=["http://jolly-moon-50681.pktriot.net:22094", "http://localhost:5000", "http://127.0.0.1:5000/, http://127.0.0.1:5000/"])
-# CORS(app)
+
+sql_username=os.getenv('SQL_USERNAME')
+sql_password=os.getenv('SQL_PASSWORD')
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://{sql_username}:{sql_password}@sql3.freemysqlhosting.net/sql3697092'
+
 ma = Marshmallow(app)
 db = SQLAlchemy(app)
 
