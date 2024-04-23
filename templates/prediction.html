@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+              crossorigin="anonymous"></script>
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
@@ -16,13 +20,38 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+              crossorigin="anonymous"></script>
+
+      <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+            type="text/css"/>
+      <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+            rel="stylesheet" type="text/css"/>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+            rel="stylesheet" type="text/css"/>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+      {#      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">#}
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+              integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+              crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+              integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+              crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+              integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+              crossorigin="anonymous"></script>
+      <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
 
     <title>Fantasy Island</title>
 	<style>
 	body{
     height: 100vh;
     width: 100%;
-    background: radial-gradient(#480d35 ,#17151d);
+    {#background: radial-gradient(#480d35 ,#17151d);#}
     display: grid;
     place-items: center;
 }
@@ -96,15 +125,258 @@
       </div>
   </nav>
   <!-- E N D  N A V B A R -->
-  
 
+  <div class="container" style="margin-top: 50px; padding-top: 30px">
+      <div class="row justify-content-md-center">
+          <div class="col-3 d-flex justify-content-center d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Fanty Wheel</h2>
+                      <p>Estimated Wait Time: <span id="FantyWheel">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('FantyWheel')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Go Karting</h2>
+                      <p>Estimated Wait Time: <span id="GoKarting">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('GoKarting')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Toy Train</h2>
+                      <p>Estimated Wait Time: <span id="ToyTrain">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('ToyTrain')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row justify-content-md-center">
+
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Ghost House</h2>
+                      <p>Estimated Wait Time: <span id="GhostHouse">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('GhostHouse')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Bumping Cars</h2>
+                      <p>Estimated Wait Time: <span id="BumpingCars">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('BumpingCars')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Snow World</h2>
+                      <p>Estimated Wait Time: <span id="SnowWorld">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('SnowWorld')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row justify-content-md-center">
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Roller Coaster</h2>
+                      <p>Estimated Wait Time: <span id="RollerCoaster">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('RollerCoaster')">Join
+                              Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Tower</h2>
+                      <p>Estimated Wait Time: <span id="Tower">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('Tower')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Fantasy Cups</h2>
+                      <p>Estimated Wait Time: <span id="FantasyCups">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('FantasyCups')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <div class="row justify-content-md-center">
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Carousel</h2>
+                      <p>Estimated Wait Time: <span id="Carousel">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('Carousel')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Scrambler</h2>
+                      <p>Estimated Wait Time: <span id="Scrambler">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('Scrambler')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Joker Show</h2>
+                      <p>Estimated Wait Time: <span id="JokerShow">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('JokerShow')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row justify-content-md-center">
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Fantasy Ship</h2>
+                      <p>Estimated Wait Time: <span id="FantasyShip">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('FantasyShip')">Join Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                  <div class="card-body">
+                      <h2 class="card-title">Rabbit Statue</h2>
+                      <p>Estimated Wait Time: <span id="RabbitStatue">Loading...</span></p>
+                      <div class="card-actions justify-end">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                  data-bs-target="#staticBackdrop" onclick="fillRideField('RabbitStatue')">Join
+                              Virtual-Q
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-3 d-flex justify-content-center">
+
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Ticket Details</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="ui container">
+                      <div class="row">
+                          <div class="ui label col-sm-2">Ride</div>
+                          <div class="ui input col-6">
+                              <input type="text" placeholder="Ride" id="rideinput" style="width: 250px;" disabled>
+                          </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                          <div class="ui label col-sm-2">Ticket Id</div>
+                          <div class="ui input col-6">
+                              <input type="number" placeholder="Ticket ID" id="ticketid" style="width: 250px;">
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm()">Submit
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="liveAlertPlaceholder" style="
+    margin-top: 50px;
+    right: 0px;
+    float: right;
+    width: 30%;
+    position: absolute;
+    top: 15px;
+"></div>
   <script>
-  // Function to logout the user
   function logout() {
-    // Clear the 'userData' cookie by setting an expired date
     document.cookie = 'userData=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    // Redirect the user to the login page
-    window.location.href = "/login"; // Change "/login" to the actual login page URL
+      window.location.href = "/login";
   }
 
   window.onload = function() {
@@ -121,23 +393,129 @@
           const userDataString = cookie.substring('userData='.length, cookie.length);
           const userData = JSON.parse(decodeURIComponent(userDataString));
           const expirationTime = new Date(userData.expirationTime);
-          // Check if the expiration time is in the future
+
           if (expirationTime > new Date()) {
-            return true; // Return true if the user is logged in
+              return true;
           }
         }
       }
-      return false; // Return false if 'userData' is not found or has expired
+        return false;
     }
 
-    // Check if the user is logged in
     if (!isLoggedIn()) {
       // Redirect to home page if the user is logged in
       {#window.location.href = "/";#}
     }
   }
 </script>
+  <script>
+      const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+      const appendAlert = (message, type) => {
+          const wrapper = document.createElement('div')
+          wrapper.innerHTML = [
+              `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+              `   <div>${message}</div>`,
+              '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+              '</div>'
+          ].join('');
+          alertPlaceholder.innerText = '';
+          alertPlaceholder.append(wrapper)
+      }
 
+      function fillRideField(iv_ride) {
+          var rideinput = document.getElementById("rideinput");
+          rideinput.value = iv_ride;
+      }
+
+      function updateWaitTime() {
+
+          const date = new Date();
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, '0');
+          const day = String(date.getDate()).padStart(2, '0');
+          const hours = String(date.getHours()).padStart(2, '0');
+          const minutes = String(date.getMinutes()).padStart(2, '0');
+
+          const currentDate = `${year}-${month}-${day}`;
+          const currentTime = `${hours}:${minutes}`;
+          const ride = ["FantyWheel", "GoKarting", "ToyTrain", "GhostHouse", "BumpingCars",
+              "SnowWorld", "RollerCoaster", "Tower", "FantasyCups", "Carousel",
+              "Scrambler", "JokerShow", "FantasyShip", "RabbitStatue"];
+          var rideDetails = [];
+          for (const rideData of ride) {
+              var rideDetail = {
+                  "Date": currentDate,
+                  "Time": currentTime,
+                  "Ride": rideData,
+                  "PeopleCount": Math.floor(Math.random() * (50 - 10 + 1)) + 10
+              };
+              rideDetails.push(rideDetail);
+          }
+          fetch('/predicttime', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(rideDetails)
+          })
+              .then(response => response.json())
+              .then(data => {
+                  // Update wait time on the page
+                  data.forEach(function (obj) {
+                      var attractionName = Object.keys(obj)[0];
+                      var waitTime = obj[attractionName];
+
+                      var spanElement = document.getElementById(attractionName);
+
+                      if (spanElement) {
+                          spanElement.textContent = waitTime;
+                      }
+                  });
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+              });
+      }
+
+      function submitForm() {
+          const ticketid = document.getElementById('ticketid').value;
+          const rideinput = document.getElementById('rideinput').value;
+
+          const requestDetails = {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({"TicketID": ticketid, "Ride": rideinput})
+          };
+
+          fetch('/joinqueue', requestDetails)
+              .then(response => {
+                  if (!response.ok) {
+                      return response.json().then((responsetext) => {
+                          console.error(responsetext.error);
+                          appendAlert(responsetext.error, 'danger');
+                          throw new Error(responsetext.error);
+                      });
+                  } else {
+                      return response.json();
+                  }
+              })
+              .then(data => {
+                  const queueData = data;
+                  console.log(queueData);
+                  appendAlert(`Successfully added to queue. <br> Current position: ${queueData.currentPosition} <br> Current Queue Length: ${queueData.currentLength}`, 'success');
+              })
+              .catch(error => {
+                  console.error('There was a problem with your fetch operation:', error);
+              });
+      }
+
+
+      // Update wait time initially
+      updateWaitTime();
+      setInterval(updateWaitTime, 60000);
+  </script>
 
   </body>
 </html>

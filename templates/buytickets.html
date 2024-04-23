@@ -292,9 +292,9 @@ const appendAlert = (message, type) => {
     .then(response => {
               if (!response.ok) {
         return response.json().then((responsetext) => {
-            console.error(responsetext.message);
-            appendAlert(responsetext.message, 'danger');
-            throw new Error(responsetext.message);
+            console.error(responsetext.error);
+            appendAlert(responsetext.error, 'danger');
+            throw new Error(responsetext.error);
         });
               }
               else {

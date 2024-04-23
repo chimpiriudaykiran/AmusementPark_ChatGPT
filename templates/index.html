@@ -40,6 +40,48 @@
     align-items: center;
     border-radius: 20%; /* for a circular background */
 }
+
+h1{
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: #f6d8d5;
+  background-image: radial-gradient(#f6d8d5);
+  font-size: 150px;
+}
+h1::before{
+  width: 100%;
+  content: attr(data-text);
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  color: #313f97;
+  z-index: -1;
+  transition: 0.2s;
+}
+h1:hover::before{
+  width: 100%;
+  top: 0.04em;
+  left: 0.04em;
+}
+h1::after{
+  width: 100%;
+  content: attr(data-text);
+  position: absolute;
+  color: transparent;
+  top: 0em;
+  left: 0em;
+  background-image: radial-gradient(rgba(236, 34, 37, 0.5) 0.0125em, transparent 0.0125em);
+  background-size: 8px 8px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1px #ec2225;
+  transition: 0.2s;
+}
+h1:hover::after{
+  width: 100%;
+  top: -0.04em;
+  left: -0.04em;
+}
 </style>
   </head>
 

@@ -1,31 +1,24 @@
 <!doctype html>
 <html lang="en-US">
   <head>
-    <!-- Required meta tags -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
     <!-- Custom Css -->
-    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+      <link rel="stylesheet" href="./static/css/style.css" type="text/css"/>
 
     <!-- Ionic icons -->
     <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Fantasy Island</title>
 	<style>
-	body{
-    height: 100vh;
-    width: 100%;
-    background: radial-gradient(#480d35 ,#17151d);
-    display: grid;
-    place-items: center;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 	.icon-vector {
 	    display: flex;
     justify-content: center;
@@ -34,13 +27,113 @@
     margin: 5px;
     filter: brightness(0.85);
 }
-.icon-background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20%; /* for a circular background */
-}
+
+        *, *:after, *:before {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --c-theme-primary: #008FFD;
+            --c-theme-primary-accent: #CBE8FF;
+            --c-bg-primary: #D6DAE0;
+            --c-bg-secondary: #EAEBEC;
+            --c-bg-tertiary: #FDFDFD;
+            --c-text-primary: #1F1F25;
+            --c-text-secondary: #999FA6;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--c-bg-primary);
+            color: var(--c-text-primary);
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer;
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+
+        span {
+            cursor: pointer;
+        }
+
+        .number {
+        {#margin:100px;#}
+        }
+
+        .minus, .plus {
+            width: 20px;
+            height: 20px;
+            background: #f2f2f2;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        input {
+            height: 34px;
+            width: 100px;
+            text-align: center;
+            font-size: 26px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
 </style>
+      <!-- Bootstrap CSS -->
+{#      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"#}
+{#            integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">#}
+
+      <!-- Custom Css -->
+      <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
+
+      <!-- Ionic icons -->
+      <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+      {#<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">#}
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+              crossorigin="anonymous"></script>
+
+      <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+            type="text/css"/>
+      <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+            rel="stylesheet" type="text/css"/>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+            rel="stylesheet" type="text/css"/>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+      {#      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">#}
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+              integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+              crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+              integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+              crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+              integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+              crossorigin="anonymous"></script>
+      <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+
   </head>
 
   <body>
@@ -96,8 +189,41 @@
       </div>
   </nav>
   <!-- E N D  N A V B A R -->
-  
+  <div style="
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+">
+      <div>
+          <div class="container">
+              <h2>Virtual Queue Status</h2>
+              <div class="ui label">Ticket Id</div>
+              <div class="ui input">
+                  <input type="number" placeholder="Ticket ID" id="ticketid" style="width: 250px;">
+              </div>
+              <br><br>
+              <button class="ui button primary" onclick="submitForm()">Submit</button>
 
+          </div>
+      </div>
+      <div style="margin-top: 30px; width: 60%">
+          <div class="card-container" id="cardContainer"></div>
+      </div>
+  </div>
+  <br>
+
+  <div id="liveAlertPlaceholder" style="
+    margin-top: 50px;
+    right: 0px;
+    float: right;
+    width: 30%;
+    position: absolute;
+    top: 15px;
+"></div>
   <script>
   // Function to logout the user
   function logout() {
@@ -137,7 +263,81 @@
     }
   }
 </script>
+  <script>
+      function submitForm() {
 
+          const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+          const appendAlert = (message, type) => {
+              const wrapper = document.createElement('div')
+              wrapper.innerHTML = [
+                  `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                  `   <div>${message}</div>`,
+                  '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                  '</div>'
+              ].join('');
+              alertPlaceholder.innerText = '';
+              alertPlaceholder.append(wrapper)
+          }
+
+          const ticketid = document.getElementById('ticketid').value;
+
+          const requestDetails = {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({"TicketID": ticketid})
+          };
+
+          fetch('/queuedetails', requestDetails)
+              .then(response => {
+                  if (!response.ok) {
+                      return response.json().then((responsetext) => {
+                          console.error(responsetext.error);
+                          appendAlert(responsetext.error, 'danger');
+                          throw new Error(responsetext.error);
+                      });
+                  } else {
+                      return response.json();
+                  }
+              })
+              .then(data => {
+                  // Assuming the response data contains ticket details
+                  // Now you can use this data to dynamically generate cards, as shown in the previous example
+                  // For example:
+                  const queueData = data; // Assuming the response contains ticket details
+                  const cardContainer = document.getElementById('cardContainer');
+                  cardContainer.innerHTML = ''; // Clear previous cards
+                  if (queueData.length === 0) {
+                      appendAlert('No details found in Queue', 'danger');
+                      throw new Error('No details found in Queue');
+                  }
+                  queueData.forEach(virtualq => {
+                      const card = document.createElement('div');
+                      card.classList.add('card');
+
+                      const cardBody = document.createElement('div');
+                      cardBody.classList.add('card-body');
+
+                      const title = document.createElement('h5');
+                      title.classList.add('card-title');
+                      title.textContent = `Ticket ID: ${ticketid}`;
+
+                      const text = document.createElement('p');
+                      text.classList.add('card-text');
+                      text.textContent = `Ride Name: ${virtualq.Ride}, Current Position: ${virtualq.position}, Current Queue Length: ${virtualq.currentLength}`;
+
+                      cardBody.appendChild(title);
+                      cardBody.appendChild(text);
+                      card.appendChild(cardBody);
+                      cardContainer.appendChild(card);
+                  });
+              })
+              .catch(error => {
+                  console.error('There was a problem with your fetch operation:', error);
+              });
+      }
+  </script>
 
   </body>
 </html>
