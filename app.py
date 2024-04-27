@@ -82,7 +82,7 @@ def get_holiday_details(date):
 def reduce_queue():
     global queue, lock
     while True:
-        time.sleep(60)  # 300 seconds = 5 minutes
+        time.sleep(300)  # 300 seconds = 5 minutes
         with lock:
             for ride, q in queue.items():
                 for i in range(ride_capacity[ride]):
