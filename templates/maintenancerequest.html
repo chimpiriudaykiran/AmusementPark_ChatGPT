@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Dashboard</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- Template Main CSS File -->
+    <link href="static/css/style-admin.css" rel="stylesheet">
+
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+          rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+          rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+          rel="stylesheet" type="text/css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+    <div class="d-flex align-items-center justify-content-center">
+        <div style="flex: 1"></div>
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+            <img src="static/images/logo.png" alt="FantasyIsland" style="scale: 100%">
+        </a>
+        <div style="flex: 1"></div>
+    </div>
+    <br>
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="admin">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="validate">
+                <i class="ri-ticket-2-line"></i>
+                <span>Validate Tickets</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-menu-button-wide"></i><span>Maintenance</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="">
+                        <i class="bi bi-circle"></i><span>Maintenance request</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="viewmaintenance">
+                        <i class="bi bi-circle"></i><span>Maintenance Status</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="viewfeedback">
+                <i class="bi bi-journals"></i>
+                <span>Feedback Forms</span>
+            </a>
+        </li>
+    </ul>
+
+</aside>
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Raise a Maintenance request</h1>
+    </div>
+
+    <section class="section dashboard">
+        <div class="container-fluid shadow-sm p-3 mb-5 rounded rounded border" style="
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+">
+
+            <div style="
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+">
+
+                <div class="container" style="text-align: center;">
+                    <div class="row justify-content-center" style="margin-top: 20px">
+                        <div class="col-lg-6">
+<form id="maintenanceRequestForm">
+    <div class="form-row">
+        <div class="form-group">
+            <strong><label for="ride">Ride</label></strong>
+            <select class="form-control" id="ride" name="ride" required>
+                <option value="" disabled selected>Select Ride</option>
+                <option value="FantyWheel">FantyWheel</option>
+                <option value="GoKarting">GoKarting</option>
+                <option value="ToyTrain">ToyTrain</option>
+                <option value="GhostHouse">GhostHouse</option>
+                <option value="BumpingCars">BumpingCars</option>
+                <option value="SnowWorld">SnowWorld</option>
+                <option value="RollerCoaster">RollerCoaster</option>
+                <option value="Tower">Tower</option>
+                <option value="FantasyCups">FantasyCups</option>
+                <option value="Carousel">Carousel</option>
+                <option value="Scrambler">Scrambler</option>
+                <option value="JokerShow">JokerShow</option>
+                <option value="FantasyShip">FantasyShip</option>
+                <option value="RabbitStatue">RabbitStatue</option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <strong><label for="maintenanceType">Maintenance Type</label></strong>
+            <select class="form-control" id="maintenanceType" name="maintenanceType" required>
+                <option value="" disabled selected>Select Maintenance Type</option>
+                <option value="Regular Inspection">Regular Inspection</option>
+                <option value="Repair">Repair</option>
+                <option value="Replacement of Parts">Replacement of Parts</option>
+                <option value="Cleaning">Cleaning</option>
+                <option value="Adjustment">Adjustment</option>
+                <option value="Emergency Repair">Emergency Repair</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <strong><label for="description">Description</label></strong>
+        <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+    </div>
+    <div class="form-group" style="margin-bottom: 20px;">
+        <!-- Space -->
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Submit Maintenance Request</button>
+</form>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 30px; width: 100%">
+                    <div class="card-container" id="cardContainer"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+<div id="liveAlertPlaceholder" style="
+    margin-top: 50px;
+    right: 0px;
+    float: right;
+    width: 30%;
+    position: absolute;
+    top: 15px;
+"></div>
+
+<script>
+    function logout() {
+        // Clear the 'userData' cookie by setting an expired date
+        document.cookie = 'userData=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        // Redirect the user to the login page
+        window.location.href = "/login"; // Change "/login" to the actual login page URL
+    }
+
+    window.onload = function () {
+        // Function to check if the user is logged in
+        function isLoggedIn() {
+            // Get all cookies
+            const cookies = document.cookie.split(';');
+            // Loop through each cookie to find userData
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Check if the cookie contains 'userData'
+                if (cookie.startsWith('userData=')) {
+                    // If 'userData' is found, parse it and check expiration time
+                    const userDataString = cookie.substring('userData='.length, cookie.length);
+                    const userData = JSON.parse(decodeURIComponent(userDataString));
+                    const expirationTime = new Date(userData.expirationTime);
+                    // Check if the expiration time is in the future
+                    if (expirationTime > new Date()) {
+                        return true; // Return true if the user is logged in
+                    }
+                }
+            }
+            return false; // Return false if 'userData' is not found or has expired
+        }
+
+        // Check if the user is logged in
+        if (!isLoggedIn()) {
+            // Redirect to home page if the user is logged in
+            {#window.location.href = "/";#}
+        }
+    }
+</script>
+<script>
+    document.getElementById("maintenanceRequestForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        submitMaintenanceRequest();
+    });
+
+    function submitMaintenanceRequest() {
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('');
+            alertPlaceholder.innerText = '';
+            alertPlaceholder.append(wrapper);
+        };
+
+        const formData = new FormData(document.getElementById('maintenanceRequestForm'));
+
+        fetch("/submitmaintenance", {
+            method: "POST",
+            body: JSON.stringify(Object.fromEntries(formData)),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            return response.json().then((responsetext) => {
+                console.error(responsetext.error);
+                appendAlert(responsetext.error, 'danger');
+                throw new Error(responsetext.error);
+            });
+        })
+        .then(data => {
+            appendAlert('Maintenance request submitted', 'success');
+            document.getElementById('maintenanceRequestForm').reset(); // Clear form after successful submission
+        })
+        .catch(error => {
+            appendAlert(error, 'danger');
+            console.error(error);
+        });
+
+        document.getElementById('ride').value = '';
+        document.getElementById('maintenanceType').value = '';
+        document.getElementById('description').value = '';
+    }
+</script>
+
+</body>
+
+</html>

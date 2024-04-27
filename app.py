@@ -131,78 +131,91 @@ def predict_wait_time(input_data):
 
 
 @app.route('/')
-def index():
+def render_index():
     return render_template('index.html')
 
 
 @app.route('/rides')
-def rides():
+def render_rides():
     return render_template('rides.html')
 
 
 @app.route('/signup')
-def signup():
+def render_signup():
     return render_template('signup.html')
 
 
 @app.route('/map')
-def rendermap():
+def render_map():
     return render_template('map.html')
 
 
 @app.route('/login')
-def login():
+def render_login():
     return render_template('login.html')
 
 
 @app.route('/buy')
-def buy():
+def render_buy():
     return render_template('buytickets.html')
 
 
 @app.route('/feedback')
-def feedback():
+def render_feedback():
     return render_template('feedbackform.html')
 
 
 @app.route('/customerservices')
-def services():
+def render_services():
     return render_template('customerservices.html')
 
 
 @app.route('/contactus')
-def contactus():
+def render_contactus():
     return render_template('contactus.html')
 
 
 @app.route('/recommendation')
-def recommendation():
+def render_recommendation():
     return render_template('recommendation.html')
 
 
 @app.route('/virtualq')
-def virtualq():
+def render_virtualq():
     return render_template('virtualq.html')
 
 
 @app.route('/mytrips')
-def mytrips():
+def render_mytrips():
     return render_template('mytrips.html')
 
-
 @app.route('/prediction')
-def prediction():
+def render_prediction():
     return render_template('prediction.html')
 
-
-# @app.route('/prediction')
-# def prediction():
-#    return render_template('prediction.html')
-
-
 @app.route('/parkmap')
-def parkmap():
+def render_parkmap():
     return render_template('map.html')
+
+@app.route('/admin')
+def render_admin():
+    return render_template('admin.html')
+
+@app.route('/validate')
+def render_validate():
+    return render_template('validateticket.html')
+
+@app.route('/viewfeedback')
+def render_viewfeedbackform():
+    return render_template('viewfeedbackforms.html')
+
+@app.route('/maintenance')
+def render_maintenance():
+    return render_template('maintenancerequest.html')
+
+@app.route('/viewmaintenance')
+def render_viewmaintenace():
+    return render_template('viewmaintenance.html')
 
 
 class Users(db.Model):
@@ -219,6 +232,12 @@ class Users(db.Model):
         self.LastName = LastName
         self.DateOfBirth = DateOfBirth
 
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def verify_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
 
 class Ticket(db.Model):
     TicketID = db.Column(db.Integer, primary_key=True)
@@ -231,7 +250,7 @@ class Ticket(db.Model):
     purchaseDate = db.Column(db.Date, default=datetime.date.today, nullable=False)
     AmountPaid = db.Column(db.Float, nullable=False)
     DueAmount = db.Column(db.Float, nullable=False)
-
+    CheckedIn = db.Column(db.Boolean)
     def __init__(self, TicketID, emailid, TransactionID, Name, AdultCount, ChildCount, entryDate, AmountPaid,
                  DueAmount):
         self.TicketID = TicketID
@@ -244,12 +263,51 @@ class Ticket(db.Model):
         self.AmountPaid = AmountPaid
         self.DueAmount = DueAmount
 
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
+class feedbackform(db.Model):
+    formid = db.Column(db.Integer, primary_key=True)
+    emailid = db.Column(db.String(255), nullable=False)
+    name = db.Column(db.String(100), nullable=False)
+    feedback = db.Column(db.Text, nullable=False)
+    date = db.Column(db.Date, default=datetime.date.today, nullable=False)
+    def __init__(self, emailid, name, feedback):
+        self.emailid = emailid
+        self.name = name
+        self.feedback = feedback
 
-    def verify_password(self, password):
-        return check_password_hash(self.password_hash, password)
+class maintenance(db.Model):
+    maintenanceID = db.Column(db.Integer, primary_key=True)
+    ride = db.Column(db.String(45), nullable=False)
+    maintenancetype = db.Column(db.String(45), nullable=False)
+    description = db.Column(db.String(45), nullable=False)
+    status = db.Column(db.Integer, default=False , nullable=False)
+    requestDate = db.Column(db.Date, default=datetime.date.today, nullable=False)
+    completionDate = db.Column(db.Date, nullable=False)
 
+    def __init__(self, ride, maintenancetype, description):
+        # self.maintenanceID = maintenanceID
+        self.ride = ride
+        self.maintenancetype = maintenancetype
+        self.description = description
+        # self.status = status
+        # self.requestDate = requestDate
+        # self.completionDate = completionDate
+
+
+class ridereview(db.Model):
+    maintenanceID = db.Column(db.Integer, primary_key=True)
+    ride = db.Column(db.String(45), nullable=False)
+    maintenancetype = db.Column(db.String(45), nullable=False)
+    status = db.Column(db.Integer, nullable=False)
+    requestDate = db.Column(db.Date, default=datetime.date.today, nullable=False)
+    completionDate = db.Column(db.Date, nullable=False)
+
+    def __init__(self, maintenanceID, ride, maintenancetype, status, requestDate, completionDate):
+        self.maintenanceID = maintenanceID
+        self.ride = ride
+        self.maintenancetype = maintenancetype
+        self.status = status
+        self.requestDate = requestDate
+        self.completionDate = completionDate
 
 class userSchema(ma.Schema):
     class Meta:
@@ -264,11 +322,26 @@ class ticketSchema(ma.Schema):
     class Meta:
         fields = (
         'TicketID', 'emailid', 'TransactionID', 'Name', 'AdultCount', 'ChildCount', 'entryDate', 'purchaseDate',
-        'AmountPaid', 'DueAmount')
+        'AmountPaid', 'DueAmount', 'CheckedIn')
 
 
 ticket_schema = ticketSchema()
 tickets_schema = ticketSchema(many=True)
+
+class feedbackSchema(ma.Schema):
+    class Meta:
+        fields = ('formID', 'emailid', 'name', 'feedback', 'date')
+
+
+feedback_schema = feedbackSchema()
+feedbacks_schema = feedbackSchema(many=True)
+
+class maintenanceSchema(ma.Schema):
+    class Meta:
+        fields = ('maintenanceID', 'ride', 'maintenancetype', 'status', 'requestDate', 'completionDate')
+
+maintenance_schema = maintenanceSchema()
+maintenances_schema = maintenanceSchema(many=True)
 
 
 @app.route('/predicttime', methods=['POST'])
@@ -431,7 +504,7 @@ def validate_credentials():
         return jsonify({"message": "Error validating credentials", "error": str(e)}), 500
 
 
-def converDate(date):
+def convertDate(date):
     return datetime.datetime.strptime(date, '%B %d, %Y').date()
 
 
@@ -442,7 +515,7 @@ def buytickets():
         emailid = request.json.get('emailid')
         adult_count = int(request.json.get('AdultCount'))
         child_count = int(request.json.get('ChildCount'))
-        entry_date = converDate(request.json.get('entryDate'))
+        entry_date = convertDate(request.json.get('entryDate'))
         transaction_id = request.json.get('TransactionID')  # New parameter for transaction ID
         amount_paid = float(request.json.get('AmountPaid'))  # New parameter for amount paid
         due_amount = float(request.json.get('DueAmount'))  # New parameter for due amount
@@ -469,8 +542,8 @@ def buytickets():
 def get_ticket_details():
     try:
         emailid = request.json.get('emailid')
-        if not emailid or not Users.query.get(emailid):
-            return jsonify({"message": "User not found"}), 404
+        if not emailid:
+            return jsonify({"message": "Please provide the Email Id"}), 404
 
         user_tickets = Ticket.query.filter_by(emailid=emailid).all()
 
@@ -498,21 +571,25 @@ def get_ticket_details():
 def validate_ticket():
     try:
         ticket_id = request.json.get('TicketID')
-        # user_id = request.json.get('UserID')
-        # entry_date = request.json.get('entryDate')
+
         if not ticket_id:
             return jsonify({"message": "Ticket ID is missing"}), 400
         ticket_details = Ticket.query.get(ticket_id)
+        if ticket_details.CheckedIn:
+            return jsonify({"message": "Ticket is already checked"}), 400
         if not ticket_details:
             return jsonify({"message": "Ticket not found"}), 404
 
         # if not ticket_details.UserID == user_id:
         #     return jsonify({"message": "Ticket is not assigned to the correct user"}), 400
 
-        if not ticket_details.entryDate == datetime.date.today().strftime("%Y%m%d"):
+        if not ticket_details.entryDate == datetime.date.today():
             return jsonify({"message": "Ticket is booked for different date"}), 400
 
-        return jsonify({"message": "Ticket is valid"}), 200
+        ticket_details.CheckedIn = 1
+        db.session.commit()
+
+        return jsonify({"message": "Ticket is valid and Checked-In successfully"}), 200
     except Exception as e:
         return jsonify({"message": "Error validating ticket", "error": str(e)}), 500
 
@@ -540,6 +617,9 @@ def join_queue():
 
         if not ticket_details.entryDate == datetime.date.today():
             return jsonify({"message": "Ticket is booked for different date"}), 400
+
+        if not ticket_details:
+            return jsonify({"message": "Ticket is not Checked-In"}), 400
 
         currentposition = len(queue[ride])
         if not ticket_id in queue[ride]:
@@ -577,6 +657,108 @@ def queuedetails():
             result.append({"Ride": ride, "position": q.index(ticket_id), "currentLength": len(q)})
 
     return jsonify(result)
+
+@app.route('/submitfeedback', methods=['POST'])
+@cross_origin()
+def submitfeedback():
+    try:
+        email = request.json.get('email')
+        name = request.json.get('name')
+        feedback_msg = request.json.get('feedback')
+
+        new_feedback = feedbackform(emailid=email, name=name, feedback=feedback_msg)
+
+        db.session.add(new_feedback)
+        db.session.commit()
+
+        return jsonify({"message": "Feedback submitted successfully"}), 200
+    except Exception as e:
+        return jsonify({"message": "Error submitting the feedback", "error": str(e)}), 500
+
+
+@app.route('/getfeedback', methods=['POST'])
+@cross_origin(supports_credentials=True)
+def get_feedback_details():
+    try:
+        fromdate = request.json.get('fromdate')
+        todate = request.json.get('todate')
+
+        if fromdate and todate:
+            feedback_forms = feedbackform.query.filter(feedbackform.date.between(convertDate(fromdate), convertDate(todate))).all()
+        elif fromdate:
+            feedback_forms = feedbackform.query.filter(feedbackform.date.between(convertDate(fromdate), convertDate(fromdate))).all()
+        else:
+            feedback_forms = feedbackform.query.all()
+
+        feedback_details = []
+        for feedback_form in feedback_forms:
+            feedback_details.append({
+                "email": feedback_form.emailid,
+                "name": feedback_form.name,
+                "feedback": feedback_form.feedback,
+                "date": feedback_form.date
+            })
+        if feedback_details:
+            return jsonify({"feedbackforms": feedback_details}), 200
+        else:
+            return jsonify({"message": "No feedbacks found", "error": "No feedbacks found"}), 500
+    except Exception as e:
+        return jsonify({"message": "Error retrieving feedback details", "error": str(e)}), 500
+
+@app.route('/submitmaintenance', methods=['POST'])
+@cross_origin()
+def submitmaintenance():
+    try:
+        ride = request.json.get('ride')
+        maintenancetype = request.json.get('maintenanceType')
+        description = request.json.get('description')
+
+        new_maintenance = maintenance(ride=ride, maintenancetype=maintenancetype, description=description)
+
+        db.session.add(new_maintenance)
+        db.session.commit()
+
+        return jsonify({"message": "Feedback submitted successfully"}), 200
+    except Exception as e:
+        return jsonify({"message": "Error submitting the feedback", "error": str(e)}), 500
+
+@app.route('/getmaintenance', methods=['POST'])
+@cross_origin(supports_credentials=True)
+def get_maintenance_details():
+    try:
+        fromdate = request.json.get('fromdate')
+        todate = request.json.get('todate')
+
+        if fromdate and todate:
+            maintenance_datas = maintenance.query.filter(feedbackform.date.between(convertDate(fromdate), convertDate(todate))).all()
+        elif fromdate:
+            maintenance_datas = maintenance.query.filter(feedbackform.date.between(convertDate(fromdate), convertDate(fromdate))).all()
+        else:
+            maintenance_datas = maintenance.query.all()
+
+        maintenance_details = []
+        for maintenance_data in maintenance_datas:
+            if maintenance_data.status:
+                status = 'Completeted'
+            else:
+                status = 'Not Completeted'
+
+            maintenance_details.append({
+                "maintenanceID": maintenance_data.maintenanceID,
+                "ride": maintenance_data.ride,
+                "maintenancetype": maintenance_data.maintenancetype,
+                "description": maintenance_data.description,
+                "status": status,
+                "requestdate": maintenance_data.requestDate,
+                "compeltiondate": maintenance_data.completionDate,
+            })
+
+        if maintenance_details:
+            return jsonify({"maintenance_details": maintenance_details}), 200
+        else:
+            return jsonify({"message": "No maintenance tickets found", "error": "No maintenance tickets found"}), 500
+    except Exception as e:
+        return jsonify({"message": "Error retrieving details", "error": str(e)}), 500
 
 
 if __name__ == '__main__':

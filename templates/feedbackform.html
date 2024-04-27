@@ -179,10 +179,6 @@
         });
 
         function submitFeedback() {
-            document.getElementById('name').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('feedback').value = '';
-
             const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
             const appendAlert = (message, type) => {
                 const wrapper = document.createElement('div')
@@ -196,31 +192,37 @@
                 alertPlaceholder.append(wrapper)
             }
 
-            appendAlert('Feedback form submitted', 'success');
-            {#const formData = new FormData(this);#}
+            const formData = new FormData(document.getElementById('feedbackForm'));
 
-            {#fetch("/submit_feedback", {#}
-            {#    method: "POST",#}
-            {#    body: JSON.stringify(Object.fromEntries(formData)),#}
-            {#    headers: {#}
-            {#        "Content-Type": "application/json"#}
-            {#    },})#}
-            {#    .then(response => {#}
-            {#        if (response.ok) {#}
-            {#            return response.json();#}
-            {#        }#}
-            {#        appendAlert('Feedback form submitted', 'success');#}
-            {#        throw new Error('Network response was not ok.');#}
-            {#    })#}
-            {#    .then(data => {#}
-            {#        appendAlert('Feedback form submitted', 'success');#}
-            {#    })#}
-            {#    .catch(error => {#}
-            {#        appendAlert('Feedback form submitted', 'success');#}
-            {#        console.error('There was a problem with the fetch operation:', error);#}
-            {#    });#}
+            fetch("/submitfeedback", {
+                method: "POST",
+                body: JSON.stringify(Object.fromEntries(formData)),
+                headers: {
+                  "Content-Type": "application/json"
+                }
+              })
+              .then(response => {
+                if (response.ok) {
+                  return response.json();
+                }
+                return response.json().then((responsetext) => {
+                console.error(responsetext.error);
+                appendAlert(responsetext.error, 'danger');
+                throw new Error(responsetext.error);
+        });
+              })
+              .then(data => {
+                appendAlert('Feedback form submitted', 'success');
+                document.getElementById('feedbackForm').reset(); // Clear form after successful submission
+              })
+              .catch(error => {
+                appendAlert(error, 'danger');
+                console.error(error);
+              });
 
-
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('feedback').value = '';
         }
     </script>
 
