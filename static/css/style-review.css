@@ -1,0 +1,457 @@
+*{
+  font-family: "Lato";
+}
+
+.product-review-stars label{
+    /*text-shadow: 0px 0px 10px black;*/
+}
+
+/*end decoration*/
+
+.visuallyhidden{
+  position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);
+}
+.product-review-stars label:after{
+    content: "★";
+    color: inherit;
+    -webkit-transform: scale(4);
+    position: absolute;
+    z-index: 4;
+    left: 0px;
+    transition: all .4s;
+    opacity: 0;
+    color: inherit;
+    visibility: hidden;
+   
+}
+
+.product-review-stars input:checked + label:after{
+    visibility: visible;
+    -webkit-transform: scale(1);
+    opacity: 1;
+}
+
+.product-review-stars  {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+}
+
+.product-review-stars label{
+    font-family: "icomoon";
+    font-size: 2em;
+    position: relative;
+    cursor: pointer;
+    color: #DFE3E4;
+}
+.product-review-stars input:checked ~ label:before{
+    opacity: 1;
+}
+
+
+.product-review-stars input + label:before{
+    content: "\2605";
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out, color .3s ease-in-out;
+    backface-visibility:hidden;
+-webkit-backface-visibility:hidden;
+-moz-backface-visibility:hidden;
+-ms-backface-visibility:hidden;
+}
+
+.submitreview input + label:hover:before,
+.submitreview input + label:hover ~ label:before
+{
+    opacity: 1;
+}
+.submitreview input + label:nth-of-type(1):after,
+.submitreview input + label:nth-of-type(1):before,
+.submitreview input +  label:nth-of-type(1):hover:before,
+.submitreview input + label:nth-of-type(1):hover ~ label:before,
+.submitreview input:nth-of-type(1):checked ~ label:before{
+    color: #2ecc71;
+}
+.submitreview input + label:nth-of-type(2):after,
+.submitreview input + label:nth-of-type(2):before,
+.submitreview input + label:nth-of-type(2):hover:before,
+.submitreview input + label:nth-of-type(2):hover ~ label:before,
+.submitreview input:nth-of-type(2):checked ~ label:before{
+    color: #f1c40f;
+}
+.submitreview input + label:nth-of-type(3):after,
+.submitreview input + label:nth-of-type(3):before,
+.submitreview input + label:nth-of-type(3):hover:before,
+.submitreview input + label:nth-of-type(3):hover ~ label:before,
+.submitreview input:nth-of-type(3):checked ~ label:before{
+    color: #F39C12;
+}
+.submitreview input + label:nth-of-type(4):after,
+.submitreview input + label:nth-of-type(4):before,
+.submitreview input + label:nth-of-type(4):hover:before,
+.submitreview input + label:nth-of-type(4):hover ~ label:before,
+.submitreview input:nth-of-type(4):checked ~ label:before{
+    color: #e74c3c;
+}
+
+.submitreview input + label:nth-of-type(5):after,
+.submitreview input + label:nth-of-type(5):before,
+.submitreview label:nth-of-type(5):hover:before,
+.submitreview input:nth-of-type(5):checked ~ label:before{
+    color: #d35400;
+}
+
+.submitreview label:nth-of-type(5):hover:before{
+    color: #d35400 !important;
+}
+
+.FantyWheel input + label:nth-of-type(1):after,
+.FantyWheel input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.FantyWheel input + label:nth-of-type(2):after,
+.FantyWheel input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.FantyWheel input + label:nth-of-type(3):after,
+.FantyWheel input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.FantyWheel input + label:nth-of-type(4):after,
+.FantyWheel input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.FantyWheel input + label:nth-of-type(5):after,
+.FantyWheel input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.GoKarting input + label:nth-of-type(1):after,
+.GoKarting input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.GoKarting input + label:nth-of-type(2):after,
+.GoKarting input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.GoKarting input + label:nth-of-type(3):after,
+.GoKarting input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.GoKarting input + label:nth-of-type(4):after,
+.GoKarting input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.GoKarting input + label:nth-of-type(5):after,
+.GoKarting input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.ToyTrain input + label:nth-of-type(1):after,
+.ToyTrain input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.ToyTrain input + label:nth-of-type(2):after,
+.ToyTrain input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.ToyTrain input + label:nth-of-type(3):after,
+.ToyTrain input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.ToyTrain input + label:nth-of-type(4):after,
+.ToyTrain input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.ToyTrain input + label:nth-of-type(5):after,
+.ToyTrain input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.GhostHouse input + label:nth-of-type(1):after,
+.GhostHouse input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.GhostHouse input + label:nth-of-type(2):after,
+.GhostHouse input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.GhostHouse input + label:nth-of-type(3):after,
+.GhostHouse input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.GhostHouse input + label:nth-of-type(4):after,
+.GhostHouse input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.GhostHouse input + label:nth-of-type(5):after,
+.GhostHouse input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.BumpingCars input + label:nth-of-type(1):after,
+.BumpingCars input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.BumpingCars input + label:nth-of-type(2):after,
+.BumpingCars input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.BumpingCars input + label:nth-of-type(3):after,
+.BumpingCars input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.BumpingCars input + label:nth-of-type(4):after,
+.BumpingCars input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.BumpingCars input + label:nth-of-type(5):after,
+.BumpingCars input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.SnowWorld input + label:nth-of-type(1):after,
+.SnowWorld input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.SnowWorld input + label:nth-of-type(2):after,
+.SnowWorld input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.SnowWorld input + label:nth-of-type(3):after,
+.SnowWorld input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.SnowWorld input + label:nth-of-type(4):after,
+.SnowWorld input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.SnowWorld input + label:nth-of-type(5):after,
+.SnowWorld input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.RollerCoaster input + label:nth-of-type(1):after,
+.RollerCoaster input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.RollerCoaster input + label:nth-of-type(2):after,
+.RollerCoaster input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.RollerCoaster input + label:nth-of-type(3):after,
+.RollerCoaster input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.RollerCoaster input + label:nth-of-type(4):after,
+.RollerCoaster input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.RollerCoaster input + label:nth-of-type(5):after,
+.RollerCoaster input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.Tower input + label:nth-of-type(1):after,
+.Tower input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.Tower input + label:nth-of-type(2):after,
+.Tower input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.Tower input + label:nth-of-type(3):after,
+.Tower input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.Tower input + label:nth-of-type(4):after,
+.Tower input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.Tower input + label:nth-of-type(5):after,
+.Tower input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.FantasyCups input + label:nth-of-type(1):after,
+.FantasyCups input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.FantasyCups input + label:nth-of-type(2):after,
+.FantasyCups input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.FantasyCups input + label:nth-of-type(3):after,
+.FantasyCups input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.FantasyCups input + label:nth-of-type(4):after,
+.FantasyCups input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.FantasyCups input + label:nth-of-type(5):after,
+.FantasyCups input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.Carousel input + label:nth-of-type(1):after,
+.Carousel input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.Carousel input + label:nth-of-type(2):after,
+.Carousel input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.Carousel input + label:nth-of-type(3):after,
+.Carousel input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.Carousel input + label:nth-of-type(4):after,
+.Carousel input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.Carousel input + label:nth-of-type(5):after,
+.Carousel input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.Scrambler input + label:nth-of-type(1):after,
+.Scrambler input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.Scrambler input + label:nth-of-type(2):after,
+.Scrambler input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.Scrambler input + label:nth-of-type(3):after,
+.Scrambler input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.Scrambler input + label:nth-of-type(4):after,
+.Scrambler input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.Scrambler input + label:nth-of-type(5):after,
+.Scrambler input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.JokerShow input + label:nth-of-type(1):after,
+.JokerShow input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.JokerShow input + label:nth-of-type(2):after,
+.JokerShow input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.JokerShow input + label:nth-of-type(3):after,
+.JokerShow input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.JokerShow input + label:nth-of-type(4):after,
+.JokerShow input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.JokerShow input + label:nth-of-type(5):after,
+.JokerShow input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.FantasyShip input + label:nth-of-type(1):after,
+.FantasyShip input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.FantasyShip input + label:nth-of-type(2):after,
+.FantasyShip input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.FantasyShip input + label:nth-of-type(3):after,
+.FantasyShip input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.FantasyShip input + label:nth-of-type(4):after,
+.FantasyShip input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.FantasyShip input + label:nth-of-type(5):after,
+.FantasyShip input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}
+
+.RabbitStatue input + label:nth-of-type(1):after,
+.RabbitStatue input:nth-of-type(1):checked ~ label:before {
+  color: #2ecc71;
+}
+
+.RabbitStatue input + label:nth-of-type(2):after,
+.RabbitStatue input:nth-of-type(2):checked ~ label:before {
+  color: #f1c40f;
+}
+
+.RabbitStatue input + label:nth-of-type(3):after,
+.RabbitStatue input:nth-of-type(3):checked ~ label:before {
+  color: #F39C12;
+}
+
+.RabbitStatue input + label:nth-of-type(4):after,
+.RabbitStatue input:nth-of-type(4):checked ~ label:before {
+  color: #e74c3c;
+}
+
+.RabbitStatue input + label:nth-of-type(5):after,
+.RabbitStatue input:nth-of-type(5):checked ~ label:before {
+  color: #d35400;
+}

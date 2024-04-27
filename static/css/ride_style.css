@@ -117,6 +117,7 @@ body {
   height: 20px;
 }
 .details > .cta > .discover {
+  cursor: pointer;
   border: 1px solid #ffffff;
   background-color: transparent;
   height: 36px;
@@ -124,7 +125,7 @@ body {
   color: #ffffff;
   padding: 4px 24px;
   font-size: 12px;
-  margin-left: 16px;
+  margin-left: 320px;
   text-transform: uppercase;
 }
 

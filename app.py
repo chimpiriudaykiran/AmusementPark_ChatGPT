@@ -217,6 +217,10 @@ def render_maintenance():
 def render_viewmaintenace():
     return render_template('viewmaintenance.html')
 
+@app.route('/ridereview')
+def render_ridereview():
+    return render_template('ridereview.html')
+
 
 class Users(db.Model):
     emailid = db.Column(db.String(255), primary_key=True)

@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/style-review.css" type="text/css"/>
+
+    <!-- Ionic icons -->
+    <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css"/>
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+          rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+          rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    {#      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">#}
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+
+    <title>Fantasy Island</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+        {#background: radial-gradient(#480d35 ,#17151d);#} display: grid;
+            place-items: center;
+        }
+
+        .icon-vector {
+            display: flex;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            filter: brightness(0.85);
+        }
+
+        .icon-background {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20%; /* for a circular background */
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- N A V B A R -->
+<nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
+    <div class="container" style="margin-left: 1px; max-width: 100%;height: 50px">
+        <img src="../static/images/logo.png" class="img-fluid nav-logo-desktop" alt="Fantasy Island"
+             style="width: 40px;">
+        <ul class="navbar-nav ml-auto nav-right navbar_nav_custom" data-easing="easeInOutExpo" data-speed="1250"
+            data-offset="65">
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="buy">Tickets</a>
+            </li>
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="mytrips">My Trips</a>
+            </li>
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="rides">Rides</a>
+            </li>
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="map">Park Map</a>
+            </li>
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="virtualq">Virtual-Q</a>
+            </li>
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="prediction">Time Prediction</a>
+            </li>
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="customerservices">Customer Services</a>
+            </li>
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="feedback">Feedback Form</a>
+            </li>
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    <img width="30" height="30" src="https://img.icons8.com/doodle/96/user-male-circle.png"
+                         alt="user-male-circle"/>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>
+<!-- E N D  N A V B A R -->
+
+<div class="container" style="margin-top: 50px; padding-top: 30px">
+    <div class="row justify-content-md-center">
+        <div class="col-3 d-flex justify-content-center d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Fanty Wheel</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars FantyWheel">
+                        <input type="radio" id="r1star5" name="FantyWheel" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="FantyWheel" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="FantyWheel" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="FantyWheel" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="FantyWheel" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('FantyWheel')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Go Karting</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars GoKarting">
+                        <input type="radio" id="r1star5" name="GoKarting" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="GoKarting" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="GoKarting" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="GoKarting" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="GoKarting" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('GoKarting')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Toy Train</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars ToyTrain">
+                        <input type="radio" id="r1star5" name="ToyTrain" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="ToyTrain" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="ToyTrain" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="ToyTrain" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="ToyTrain" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('ToyTrain')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row justify-content-md-center">
+
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Ghost House</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars GhostHouse">
+                        <input type="radio" id="r1star5" name="GhostHouse" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="GhostHouse" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="GhostHouse" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="GhostHouse" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="GhostHouse" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('GhostHouse')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Bumping Cars</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars BumpingCars">
+                        <input type="radio" id="r1star5" name="BumpingCars" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="BumpingCars" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="BumpingCars" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="BumpingCars" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="BumpingCars" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('BumpingCars')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Snow World</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars SnowWorld">
+                        <input type="radio" id="r1star5" name="SnowWorld" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="SnowWorld" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="SnowWorld" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="SnowWorld" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="SnowWorld" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('SnowWorld')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row justify-content-md-center">
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Roller Coaster</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars RollerCoaster">
+                        <input type="radio" id="r1star5" name="RollerCoaster" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="RollerCoaster" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="RollerCoaster" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="RollerCoaster" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="RollerCoaster" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('RollerCoaster')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Tower</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars Tower">
+                        <input type="radio" id="r1star5" name="Tower" value="5" class="visuallyhidden" disabled/><label
+                            for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="Tower" value="4" class="visuallyhidden" disabled/><label
+                            for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="Tower" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="Tower" value="2" class="visuallyhidden" disabled/><label
+                            for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="Tower" value="1" class="visuallyhidden" disabled/><label
+                            for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('Tower')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Fantasy Cups</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars FantasyCups">
+                        <input type="radio" id="r1star5" name="FantasyCups" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="FantasyCups" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="FantasyCups" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="FantasyCups" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="FantasyCups" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('FantasyCups')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row justify-content-md-center">
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Carousel</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars Carousel">
+                        <input type="radio" id="r1star5" name="Carousel" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="Carousel" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="Carousel" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="Carousel" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="Carousel" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('Carousel')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Scrambler</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars Scrambler">
+                        <input type="radio" id="r1star5" name="Scrambler" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="Scrambler" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="Scrambler" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="Scrambler" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="Scrambler" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('Scrambler')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Joker Show</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars JokerShow">
+                        <input type="radio" id="r1star5" name="JokerShow" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="JokerShow" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="JokerShow" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="JokerShow" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="JokerShow" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('JokerShow')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Fantasy Ship</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars FantasyShip">
+                        <input type="radio" id="r1star5" name="FantasyShip" value="5" class="visuallyhidden"
+                               disabled/><label for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="FantasyShip" value="4" class="visuallyhidden"
+                               disabled/><label for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="FantasyShip" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="FantasyShip" value="2" class="visuallyhidden"
+                               disabled/><label for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="FantasyShip" value="1" class="visuallyhidden"
+                               disabled/><label for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('FantasyShip')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem">
+                <div class="card-body">
+                    <h2 class="card-title">Rabbit Statue</h2>
+                    <p>Rating:</p>
+                    <div class="product-review-stars RabbitStatue">
+                        <input type="radio" id="r1star5" name="RabbitStatue" value="5" class="visuallyhidden" disabled/><label
+                            for="r1star5" title="Very Good" disabled>★</label>
+                        <input type="radio" id="r1star4" name="RabbitStatue" value="4" class="visuallyhidden" disabled/><label
+                            for="r1star4" title="Good" disabled>★</label>
+                        <input type="radio" id="r1star3" name="RabbitStatue" value="3" class="visuallyhidden" checked
+                               disabled/><label for="r1star3" title="Average" disabled>★</label>
+                        <input type="radio" id="r1star2" name="RabbitStatue" value="2" class="visuallyhidden" disabled/><label
+                            for="r1star2" title="Not Good" disabled>★</label>
+                        <input type="radio" id="r1star1" name="RabbitStatue" value="1" class="visuallyhidden" disabled/><label
+                            for="r1star1" title="Worst" disabled>★</label>
+                    </div>
+                    <br>
+                    <div class="card-actions justify-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop" onclick="fillRideField('RabbitStatue')">Post a Review
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ticket Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ui container">
+                    <div class="row">
+                        <div class="ui label col-sm-2">Ride</div>
+                        <div class="ui input col-6">
+                            <input type="text" placeholder="Ride" id="rideinput" style="width: 250px;" disabled>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="ui label col-sm-2">Rating</div>
+                        <div class="ui input col-6">
+                            <div class="product-review-stars submitreview">
+                                <input type="radio" id="star5" name="rating" value="5" class="visuallyhidden"/><label
+                                    for="star5" title="Very Good">★</label>
+                                <input type="radio" id="star4" name="rating" value="4" class="visuallyhidden"/><label
+                                    for="star4" title="Good">★</label>
+                                <input type="radio" id="star3" name="rating" value="3" class="visuallyhidden"/><label
+                                    for="star3" title="Average">★</label>
+                                <input type="radio" id="star2" name="rating" value="2" class="visuallyhidden"/><label
+                                    for="star2" title="Not Good">★</label>
+                                <input type="radio" id="star1" name="rating" value="1" class="visuallyhidden"/><label
+                                    for="star1" title="Worst">★</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm()">Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="liveAlertPlaceholder" style="
+    margin-top: 50px;
+    right: 0px;
+    float: right;
+    width: 30%;
+    position: absolute;
+    top: 15px;
+"></div>
+<script>
+    function logout() {
+        document.cookie = 'userData=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        window.location.href = "/login";
+    }
+
+    window.onload = function () {
+        // Function to check if the user is logged in
+        function isLoggedIn() {
+            // Get all cookies
+            const cookies = document.cookie.split(';');
+            // Loop through each cookie to find userData
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Check if the cookie contains 'userData'
+                if (cookie.startsWith('userData=')) {
+                    // If 'userData' is found, parse it and check expiration time
+                    const userDataString = cookie.substring('userData='.length, cookie.length);
+                    const userData = JSON.parse(decodeURIComponent(userDataString));
+                    const expirationTime = new Date(userData.expirationTime);
+
+                    if (expirationTime > new Date()) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        if (!isLoggedIn()) {
+            // Redirect to home page if the user is logged in
+            {#window.location.href = "/";#}
+        }
+    }
+</script>
+<script>
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('');
+        alertPlaceholder.innerText = '';
+        alertPlaceholder.append(wrapper)
+    }
+
+    function fillRideField(iv_ride) {
+        var rideinput = document.getElementById("rideinput");
+        rideinput.value = iv_ride;
+    }
+
+    function updateWaitTime() {
+
+        {#const date = new Date();#}
+        {#const year = date.getFullYear();#}
+        {#const month = String(date.getMonth() + 1).padStart(2, '0');#}
+        {#const day = String(date.getDate()).padStart(2, '0');#}
+        {#const hours = String(date.getHours()).padStart(2, '0');#}
+        {#const minutes = String(date.getMinutes()).padStart(2, '0');#}
+
+        {#const currentDate = `${year}-${month}-${day}`;#}
+        {#const currentTime = `${hours}:${minutes}`;#}
+
+        {#          const ride = ["FantyWheel", "GoKarting", "ToyTrain", "GhostHouse", "BumpingCars",#}
+        {#              "SnowWorld", "RollerCoaster", "Tower", "FantasyCups", "Carousel",#}
+        {#              "Scrambler", "JokerShow", "FantasyShip", "RabbitStatue"];#}
+        {#          #}
+        {#          var rideDetails = [];#}
+        {#          for (const rideData of ride) {#}
+        {#              var rideDetail = {#}
+        {#                  "Date": currentDate,#}
+        {#                  "Time": currentTime,#}
+        {#                  "Ride": rideData,#}
+        {#                  "PeopleCount": Math.floor(Math.random() * (50 - 10 + 1)) + 10#}
+        {#              };#}
+        {#              rideDetails.push(rideDetail);#}
+        {#          }#}
+
+        fetch('/predicttime', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            {#body: JSON.stringify()#}
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Update wait time on the page
+                data.forEach(function (obj) {
+                    var attractionName = Object.keys(obj)[0];
+                    var waitTime = obj[attractionName];
+
+                    var spanElement = document.getElementById(attractionName);
+
+                    if (spanElement) {
+                        spanElement.textContent = waitTime;
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    function submitForm() {
+        const ticketid = document.getElementById('ticketid').value;
+        const rideinput = document.getElementById('rideinput').value;
+
+        const requestDetails = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({"TicketID": ticketid, "Ride": rideinput})
+        };
+
+        fetch('/joinqueue', requestDetails)
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then((responsetext) => {
+                        console.error(responsetext.message);
+                        appendAlert(responsetext.message, 'danger');
+                        throw new Error(responsetext.message);
+                    });
+                } else {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                const queueData = data;
+                console.log(queueData);
+                appendAlert(`Successfully added to queue. <br> Current position: ${queueData.currentPosition} <br> Current Queue Length: ${queueData.currentLength}`, 'success');
+            })
+            .catch(error => {
+                console.error('There was a problem with your fetch operation:', error);
+            });
+    }
+
+
+    // Update wait time initially
+    updateWaitTime();
+    setInterval(updateWaitTime, 60000);
+</script>
+
+</body>
+</html>
