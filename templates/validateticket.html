@@ -27,21 +27,20 @@
     <!-- Template Main CSS File -->
     <link href="static/css/style-admin.css" rel="stylesheet">
 
+    <!-- External JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
             integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
+
+    <!-- External CSS libraries -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
           type="text/css"/>
     <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
           rel="stylesheet" type="text/css"/>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
           rel="stylesheet" type="text/css"/>
-
 </head>
 
 <body style="overflow: hidden">
@@ -99,7 +98,7 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Vadlidate Tickets</h1>
+        <h1>Validate Tickets</h1>
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
@@ -114,7 +113,8 @@
 ">
             <div>
                 <h2>Validate Ticket</h2>
-                <div class="ui label">Ticket ID</div>
+                <!-- Label with text for Ticket ID -->
+                <label for="TicketID" class="ui label">Ticket ID</label>
                 <div class="ui input">
                     <input type="number" placeholder="Ticket ID" id="TicketID" style="width: 250px;">
                 </div>

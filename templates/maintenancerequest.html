@@ -8,9 +8,6 @@
     <title>Dashboard</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Google Fonts -->
@@ -31,36 +28,17 @@
     <!-- Template Main CSS File -->
     <link href="static/css/style-admin.css" rel="stylesheet">
 
+    <!-- External JavaScript libraries -->
     <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
             integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
+
+    <!-- External CSS libraries -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
           type="text/css"/>
     <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
           rel="stylesheet" type="text/css"/>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
-          rel="stylesheet" type="text/css"/>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
-
-
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
-          type="text/css"/>
-    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
-          rel="stylesheet" type="text/css"/>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-
 
 </head>
 
@@ -145,55 +123,53 @@
                 <div class="container" style="text-align: center;">
                     <div class="row justify-content-center" style="margin-top: 20px">
                         <div class="col-lg-6">
-<form id="maintenanceRequestForm">
-    <div class="form-row">
-        <div class="form-group">
-            <strong><label for="ride">Ride</label></strong>
-            <select class="form-control" id="ride" name="ride" required>
-                <option value="" disabled selected>Select Ride</option>
-                <option value="FantyWheel">FantyWheel</option>
-                <option value="GoKarting">GoKarting</option>
-                <option value="ToyTrain">ToyTrain</option>
-                <option value="GhostHouse">GhostHouse</option>
-                <option value="BumpingCars">BumpingCars</option>
-                <option value="SnowWorld">SnowWorld</option>
-                <option value="RollerCoaster">RollerCoaster</option>
-                <option value="Tower">Tower</option>
-                <option value="FantasyCups">FantasyCups</option>
-                <option value="Carousel">Carousel</option>
-                <option value="Scrambler">Scrambler</option>
-                <option value="JokerShow">JokerShow</option>
-                <option value="FantasyShip">FantasyShip</option>
-                <option value="RabbitStatue">RabbitStatue</option>
-            </select>
-        </div>
-        <br>
-        <div class="form-group">
-            <strong><label for="maintenanceType">Maintenance Type</label></strong>
-            <select class="form-control" id="maintenanceType" name="maintenanceType" required>
-                <option value="" disabled selected>Select Maintenance Type</option>
-                <option value="Regular Inspection">Regular Inspection</option>
-                <option value="Repair">Repair</option>
-                <option value="Replacement of Parts">Replacement of Parts</option>
-                <option value="Cleaning">Cleaning</option>
-                <option value="Adjustment">Adjustment</option>
-                <option value="Emergency Repair">Emergency Repair</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
-    </div>
-    <br>
-    <div class="form-group">
-        <strong><label for="description">Description</label></strong>
-        <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
-    </div>
-    <div class="form-group" style="margin-bottom: 20px;">
-        <!-- Space -->
-    </div>
-    <button type="submit" class="btn btn-primary btn-block">Submit Maintenance Request</button>
-</form>
-
-
+                            <form id="maintenanceRequestForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <strong><label for="ride">Ride</label></strong>
+                                        <select class="form-control" id="ride" name="ride" required>
+                                            <option value="" disabled selected>Select Ride</option>
+                                            <option value="FantyWheel">FantyWheel</option>
+                                            <option value="GoKarting">GoKarting</option>
+                                            <option value="ToyTrain">ToyTrain</option>
+                                            <option value="GhostHouse">GhostHouse</option>
+                                            <option value="BumpingCars">BumpingCars</option>
+                                            <option value="SnowWorld">SnowWorld</option>
+                                            <option value="RollerCoaster">RollerCoaster</option>
+                                            <option value="Tower">Tower</option>
+                                            <option value="FantasyCups">FantasyCups</option>
+                                            <option value="Carousel">Carousel</option>
+                                            <option value="Scrambler">Scrambler</option>
+                                            <option value="JokerShow">JokerShow</option>
+                                            <option value="FantasyShip">FantasyShip</option>
+                                            <option value="RabbitStatue">RabbitStatue</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <strong><label for="maintenanceType">Maintenance Type</label></strong>
+                                        <select class="form-control" id="maintenanceType" name="maintenanceType" required>
+                                            <option value="" disabled selected>Select Maintenance Type</option>
+                                            <option value="Regular Inspection">Regular Inspection</option>
+                                            <option value="Repair">Repair</option>
+                                            <option value="Replacement of Parts">Replacement of Parts</option>
+                                            <option value="Cleaning">Cleaning</option>
+                                            <option value="Adjustment">Adjustment</option>
+                                            <option value="Emergency Repair">Emergency Repair</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <strong><label for="description">Description</label></strong>
+                                    <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 20px;">
+                                    <!-- Space -->
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Submit Maintenance Request</button>
+                            </form>
                         </div>
                     </div>
                 </div>

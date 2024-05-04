@@ -1,34 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
-  <head>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Custom Css -->
-      <link rel="stylesheet" href="./static/css/style.css" type="text/css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./static/css/style.css" type="text/css"/>
 
     <!-- Ionic icons -->
     <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Fantasy Island</title>
-	<style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-	.icon-vector {
-	    display: flex;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    margin: 5px;
-    filter: brightness(0.85);
-}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        *, *:after, *:before {
+    <title>Fantasy Island</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        .icon-vector {
+            display: flex;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            filter: brightness(0.85);
+        }
+
+        *,
+        *:after,
+        *:before {
             box-sizing: border-box;
         }
 
@@ -62,16 +66,14 @@
             }
         }
 
-
         span {
             cursor: pointer;
         }
 
-        .number {
-        {#margin:100px;#}
-        }
+        .number {}
 
-        .minus, .plus {
+        .minus,
+        .plus {
             width: 20px;
             height: 20px;
             background: #f2f2f2;
@@ -92,104 +94,37 @@
             display: inline-block;
             vertical-align: middle;
         }
+    </style>
+</head>
 
-</style>
-      <!-- Bootstrap CSS -->
-{#      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"#}
-{#            integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">#}
+<body>
 
-      <!-- Custom Css -->
-      <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
-
-      <!-- Ionic icons -->
-      <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
-
-      <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-
-      {#<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">#}
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-              crossorigin="anonymous"></script>
-
-      <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
-            type="text/css"/>
-      <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
-            rel="stylesheet" type="text/css"/>
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-      <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
-            rel="stylesheet" type="text/css"/>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
-      {#      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">#}
-
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-              integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-              crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-              integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-              crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-              integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-              crossorigin="anonymous"></script>
-      <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-
-  </head>
-
-  <body>
-
-  <!-- N A V B A R -->
-  <nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
-      <div class="container" style="margin-left: 1px; max-width: 100%;height: 50px">
-      	<img src="../static/images/logo.png" class="img-fluid nav-logo-desktop" alt="Fantasy Island" style="width: 40px;">
+<!-- NAVBAR -->
+<nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
+    <div class="container" style="margin-left: 1px; max-width: 100%;height: 50px">
+        <img src="../static/images/logo.png" class="img-fluid nav-logo-desktop" alt="Fantasy Island" style="width: 40px;">
         <ul class="navbar-nav ml-auto nav-right navbar_nav_custom" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="buy">Tickets</a>
-          </li>
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="mytrips">My Trips</a>
-          </li>
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="rides">Rides</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="map">Park Map</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="virtualq">Virtual-Q</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="prediction">Time Prediction</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="customerservices">Customer Services</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="feedback">Feedback Form</a>
-          </li>
-
-
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img width="30" height="30" src="https://img.icons8.com/doodle/96/user-male-circle.png" alt="user-male-circle"/>
-			</a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
-        </div>
-		</li>
-
-
+            <li class="nav-item nav-custom-link">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <!-- Other navbar links -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img width="30" height="30" src="https://img.icons8.com/doodle/96/user-male-circle.png" alt="user-male-circle"/>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+                </div>
+            </li>
         </ul>
-      </div>
-  </nav>
-  <!-- E N D  N A V B A R -->
-  <div style="
+    </div>
+</nav>
+<!-- END NAVBAR -->
+
+<div style="
     width: 100%;
     height: 70%;
     display: flex;
@@ -198,25 +133,22 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
 ">
-      <div>
-          <div class="container">
-              <h2>Virtual Queue Status</h2>
-              <div class="ui label">Ticket Id</div>
-              <div class="ui input">
-                  <input type="number" placeholder="Ticket ID" id="ticketid" style="width: 250px;">
-              </div>
-              <br><br>
-              <button class="ui button primary" onclick="submitForm()">Submit</button>
+    <div>
+        <div class="container">
+            <h2>Virtual Queue Status</h2>
+            <div class="form-group">
+                <label for="ticketid">Ticket ID</label>
+                <input type="number" class="form-control" id="ticketid" placeholder="Enter Ticket ID" style="width: 250px;">
+            </div>
+            <button class="btn btn-primary" onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+    <div style="margin-top: 30px; width: 60%">
+        <div class="card-container" id="cardContainer"></div>
+    </div>
+</div>
 
-          </div>
-      </div>
-      <div style="margin-top: 30px; width: 60%">
-          <div class="card-container" id="cardContainer"></div>
-      </div>
-  </div>
-  <br>
-
-  <div id="liveAlertPlaceholder" style="
+<div id="liveAlertPlaceholder" style="
     margin-top: 50px;
     right: 0px;
     float: right;
@@ -224,120 +156,117 @@
     position: absolute;
     top: 15px;
 "></div>
-  <script>
-  // Function to logout the user
-  function logout() {
-    // Clear the 'userData' cookie by setting an expired date
-    document.cookie = 'userData=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    // Redirect the user to the login page
-    window.location.href = "/login"; // Change "/login" to the actual login page URL
-  }
 
-  window.onload = function() {
-    // Function to check if the user is logged in
-    function isLoggedIn() {
-      // Get all cookies
-      const cookies = document.cookie.split(';');
-      // Loop through each cookie to find userData
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        // Check if the cookie contains 'userData'
-        if (cookie.startsWith('userData=')) {
-          // If 'userData' is found, parse it and check expiration time
-          const userDataString = cookie.substring('userData='.length, cookie.length);
-          const userData = JSON.parse(decodeURIComponent(userDataString));
-          const expirationTime = new Date(userData.expirationTime);
-          // Check if the expiration time is in the future
-          if (expirationTime > new Date()) {
-            return true; // Return true if the user is logged in
-          }
+<script>
+    // Function to logout the user
+    function logout() {
+        // Clear the 'userData' cookie by setting an expired date
+        document.cookie = 'userData=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        // Redirect the user to the login page
+        window.location.href = "/login"; // Change "/login" to the actual login page URL
+    }
+
+    window.onload = function () {
+        // Function to check if the user is logged in
+        function isLoggedIn() {
+            // Get all cookies
+            const cookies = document.cookie.split(';');
+            // Loop through each cookie to find userData
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Check if the cookie contains 'userData'
+                if (cookie.startsWith('userData=')) {
+                    // If 'userData' is found, parse it and check expiration time
+                    const userDataString = cookie.substring('userData='.length, cookie.length);
+                    const userData = JSON.parse(decodeURIComponent(userDataString));
+                    const expirationTime = new Date(userData.expirationTime);
+                    // Check if the expiration time is in the future
+                    if (expirationTime > new Date()) {
+                        return true; // Return true if the user is logged in
+                    }
+                }
+            }
+            return false; // Return false if 'userData' is not found or has expired
         }
-      }
-      return false; // Return false if 'userData' is not found or has expired
+
+        // Check if the user is logged in
+        if (!isLoggedIn()) {
+            // Redirect to home page if the user is logged in
+            // window.location.href = "/";
+        }
     }
 
-    // Check if the user is logged in
-    if (!isLoggedIn()) {
-      // Redirect to home page if the user is logged in
-      {#window.location.href = "/";#}
+    function submitForm() {
+
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('');
+            alertPlaceholder.innerText = '';
+            alertPlaceholder.append(wrapper);
+        };
+
+        const ticketid = document.getElementById('ticketid').value;
+
+        const requestDetails = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({"TicketID": ticketid})
+        };
+
+        fetch('/queuedetails', requestDetails)
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then((responsetext) => {
+                        console.error(responsetext.message);
+                        appendAlert(responsetext.message, 'danger');
+                        throw new Error(responsetext.message);
+                    });
+                } else {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                const queueData = data; // Assuming the response contains ticket details
+                const cardContainer = document.getElementById('cardContainer');
+                cardContainer.innerHTML = ''; // Clear previous cards
+                if (queueData.length === 0) {
+                    appendAlert('No details found in Queue', 'danger');
+                    throw new Error('No details found in Queue');
+                }
+                queueData.forEach(virtualq => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+
+                    const cardBody = document.createElement('div');
+                    cardBody.classList.add('card-body');
+
+                    const title = document.createElement('h5');
+                    title.classList.add('card-title');
+                    title.textContent = `Ticket ID: ${ticketid}`;
+
+                    const text = document.createElement('p');
+                    text.classList.add('card-text');
+                    text.textContent = `Ride Name: ${virtualq.Ride}, Current Position: ${virtualq.position}, Current Queue Length: ${virtualq.currentLength}`;
+
+                    cardBody.appendChild(title);
+                    cardBody.appendChild(text);
+                    card.appendChild(cardBody);
+                    cardContainer.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with your fetch operation:', error);
+            });
     }
-  }
 </script>
-  <script>
-      function submitForm() {
 
-          const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-          const appendAlert = (message, type) => {
-              const wrapper = document.createElement('div')
-              wrapper.innerHTML = [
-                  `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-                  `   <div>${message}</div>`,
-                  '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-                  '</div>'
-              ].join('');
-              alertPlaceholder.innerText = '';
-              alertPlaceholder.append(wrapper)
-          }
-
-          const ticketid = document.getElementById('ticketid').value;
-
-          const requestDetails = {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({"TicketID": ticketid})
-          };
-
-          fetch('/queuedetails', requestDetails)
-              .then(response => {
-                  if (!response.ok) {
-                      return response.json().then((responsetext) => {
-                          console.error(responsetext.message);
-                          appendAlert(responsetext.message, 'danger');
-                          throw new Error(responsetext.message);
-                      });
-                  } else {
-                      return response.json();
-                  }
-              })
-              .then(data => {
-                  // Assuming the response data contains ticket details
-                  // Now you can use this data to dynamically generate cards, as shown in the previous example
-                  // For example:
-                  const queueData = data; // Assuming the response contains ticket details
-                  const cardContainer = document.getElementById('cardContainer');
-                  cardContainer.innerHTML = ''; // Clear previous cards
-                  if (queueData.length === 0) {
-                      appendAlert('No details found in Queue', 'danger');
-                      throw new Error('No details found in Queue');
-                  }
-                  queueData.forEach(virtualq => {
-                      const card = document.createElement('div');
-                      card.classList.add('card');
-
-                      const cardBody = document.createElement('div');
-                      cardBody.classList.add('card-body');
-
-                      const title = document.createElement('h5');
-                      title.classList.add('card-title');
-                      title.textContent = `Ticket ID: ${ticketid}`;
-
-                      const text = document.createElement('p');
-                      text.classList.add('card-text');
-                      text.textContent = `Ride Name: ${virtualq.Ride}, Current Position: ${virtualq.position}, Current Queue Length: ${virtualq.currentLength}`;
-
-                      cardBody.appendChild(title);
-                      cardBody.appendChild(text);
-                      card.appendChild(cardBody);
-                      cardContainer.appendChild(card);
-                  });
-              })
-              .catch(error => {
-                  console.error('There was a problem with your fetch operation:', error);
-              });
-      }
-  </script>
-
-  </body>
+</body>
 </html>

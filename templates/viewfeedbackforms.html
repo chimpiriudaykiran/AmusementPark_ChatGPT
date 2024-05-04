@@ -8,9 +8,6 @@
     <title>Dashboard</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Google Fonts -->
@@ -31,37 +28,19 @@
     <!-- Template Main CSS File -->
     <link href="static/css/style-admin.css" rel="stylesheet">
 
+    <!-- External JavaScript libraries -->
     <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
             integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
             crossorigin="anonymous"></script>
+
+    <!-- External CSS libraries -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
           type="text/css"/>
     <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
           rel="stylesheet" type="text/css"/>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
           rel="stylesheet" type="text/css"/>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
-
-
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
-          type="text/css"/>
-    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
-          rel="stylesheet" type="text/css"/>
-
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
-
-
 </head>
 
 <body>
@@ -77,14 +56,14 @@
     </div>
     <br>
     <ul class="sidebar-nav" id="sidebar-nav">
-        <li class="nav-item">
+        <li class="nav-item ">
             <a class="nav-link collapsed" href="admin">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="validate">
+            <a class="nav-link " href="validate">
                 <i class="ri-ticket-2-line"></i>
                 <span>Validate Tickets</span>
             </a>
@@ -143,7 +122,7 @@
 ">
                 <div>
                     <div class="container" style="text-align: center;">
-                        <div class="ui label">Date</div>
+                        <label for="fromdate" class="ui label">From Date</label>
                         <div class="ui input">
                             <div class="ui calendar" id="booking-date1">
                                 <div class="ui input left icon">
@@ -153,7 +132,7 @@
                             </div>
                         </div>
 
-                        <div class="ui label">To</div>
+                        <label for="todate" class="ui label">To Date</label>
                         <div class="ui input">
                             <div class="ui calendar" id="booking-date2">
                                 <div class="ui input left icon">

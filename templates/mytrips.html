@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en-US">
-  <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,78 +18,84 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Fantasy Island</title>
-	<style>
-	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-	.icon-vector {
-	    display: flex;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    margin: 5px;
-    filter: brightness(0.85);
-}
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-*, *:after, *:before {
-	box-sizing: border-box;
-}
+        .icon-vector {
+            display: flex;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            filter: brightness(0.85);
+        }
 
-:root {
-	--c-theme-primary: #008FFD;
-	--c-theme-primary-accent: #CBE8FF;
-	--c-bg-primary: #D6DAE0;
-	--c-bg-secondary: #EAEBEC;
-	--c-bg-tertiary: #FDFDFD;
-	--c-text-primary: #1F1F25;
-	--c-text-secondary: #999FA6;
-}
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
 
-body {
-	font-family: "Inter", sans-serif;
-	line-height: 1.5;
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--c-bg-primary);
-	color: var(--c-text-primary);
-}
+        :root {
+            --c-theme-primary: #008FFD;
+            --c-theme-primary-accent: #CBE8FF;
+            --c-bg-primary: #D6DAE0;
+            --c-bg-secondary: #EAEBEC;
+            --c-bg-tertiary: #FDFDFD;
+            --c-text-primary: #1F1F25;
+            --c-text-secondary: #999FA6;
+        }
 
-button {
-	font: inherit;
-	cursor: pointer;
-	&:focus {
-		outline: 0;
-	}
-}
+        body {
+            font-family: "Inter", sans-serif;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--c-bg-primary);
+            color: var(--c-text-primary);
+        }
 
+        button {
+            font: inherit;
+            cursor: pointer;
+        }
 
-span {cursor:pointer; }
-		.number{
-			{#margin:100px;#}
-		}
-		.minus, .plus{
-			width:20px;
-			height:20px;
-			background:#f2f2f2;
-			border-radius:4px;
-			border:1px solid #ddd;
-      display: inline-block;
-      vertical-align: middle;
-      text-align: center;
-		}
-		input{
-			height:34px;
-      width: 100px;
-      text-align: center;
-      font-size: 26px;
-			border:1px solid #ddd;
-			border-radius:4px;
-      display: inline-block;
-		vertical-align: middle;}
+        span {
+            cursor: pointer;
+        }
 
-</style>
-        <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        .number {
+            /* margin:100px; */
+        }
+
+        .minus,
+        .plus {
+            width: 20px;
+            height: 20px;
+            background: #f2f2f2;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        input {
+            height: 34px;
+            width: 100px;
+            text-align: center;
+            font-size: 26px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
     <!-- Custom Css -->
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
@@ -98,78 +106,89 @@ span {cursor:pointer; }
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
-{#<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">#}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
-{#      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">#}
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js">
+    </script>
+</head>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-<script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+<body>
 
-  </head>
-
-  <body>
-
-  <!-- N A V B A R -->
-  <nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
-      <div class="container" style="margin-left: 1px; max-width: 100%;height: 50px">
-      	<img src="../static/images/logo.png" class="img-fluid nav-logo-desktop" alt="Fantasy Island" style="width: 40px;">
-        <ul class="navbar-nav ml-auto nav-right navbar_nav_custom" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="buy">Tickets</a>
-          </li>
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="mytrips">My Trips</a>
-          </li>
-          <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="rides">Rides</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="map">Park Map</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="virtualq">Virtual-Q</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="prediction">Time Prediction</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="customerservices">Customer Services</a>
-          </li>
-		  <li class="nav-item nav-custom-link">
-            <a class="nav-link" href="feedback">Feedback Form</a>
-          </li>
+    <!-- N A V B A R -->
+    <nav class="navbar navbar-default navbar-expand-lg fixed-top custom-navbar">
+        <div class="container" style="margin-left: 1px; max-width: 100%;height: 50px">
+            <img src="../static/images/logo.png" class="img-fluid nav-logo-desktop" alt="Fantasy Island"
+                style="width: 40px;">
+            <ul class="navbar-nav ml-auto nav-right navbar_nav_custom" data-easing="easeInOutExpo"
+                data-speed="1250" data-offset="65">
+                <li class="nav-item nav-custom-link">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item nav-custom-link">
+                    <a class="nav-link" href="buy">Tickets</a>
+                </li>
+                <li class="nav-item nav-custom-link">
+                    <a class="nav-link" href="mytrips">My Trips</a>
+                </li>
+                <li class="nav-item nav-custom-link">
+                    <a class="nav-link" href="rides">Rides</a>
+                </li>
+                <li class="nav-item nav-custom-link">
+                    <a class="nav-link" href="map">Park Map</a>
+                </li>
+                <li class="nav-item nav-custom-link">
+                    <a class="nav-link" href="virtualq">Virtual-Q</a>
+                </li>
+                <li class="nav-item nav-custom-link">
+                    <a class="nav-link" href="prediction">Time Prediction</a>
+                </li>
+                <li class="nav-item nav-custom-link">
+                    <a class="nav-link" href="customerservices">Customer Services</a>
+                </li>
+                <li class="nav-item nav-custom-link">
+                    <a class="nav-link" href="feedback">Feedback Form</a>
+                </li>
 
 
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img width="30" height="30" src="https://img.icons8.com/doodle/96/user-male-circle.png" alt="user-male-circle"/>
-			</a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img width="30" height="30"
+                            src="https://img.icons8.com/doodle/96/user-male-circle.png" alt="user-male-circle" />
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+                    </div>
+                </li>
+
+
+            </ul>
         </div>
-		</li>
-
-
-        </ul>
-      </div>
-  </nav>
-  <!-- E N D  N A V B A R -->
-  <div style="
+    </nav>
+    <!-- E N D  N A V B A R -->
+    <div style="
     width: 100%;
     height: 70%;
     display: flex;
@@ -178,23 +197,23 @@ span {cursor:pointer; }
     flex-wrap: nowrap;
     justify-content: flex-start;
 ">
-      <div>
-          <div class="container">
-              <h2>View Tickets</h2>
-       <div class="ui label">Email id</div>
-  <div class="ui input">
-      <input type="email" placeholder="Email" id="email" style="width: 250px;">
-  </div>
-    <br><br>
-      <button class="ui button primary" onclick="submitForm()">Submit</button>
-          </div>
-      </div>
-      <div style="margin-top: 30px; width: 60%">
-          <div class="card-container" id="cardContainer"></div>
-      </div>
-  </div>
+        <div>
+            <div class="container">
+                <h2>View Tickets</h2>
+                <label for="email">Enter Email</label> <!-- Label with text -->
+                <div class="ui input">
+                    <input type="email" placeholder="Email" id="email" style="width: 250px;">
+                </div>
+                <br><br>
+                <button class="ui button primary" onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+        <div style="margin-top: 30px; width: 60%">
+            <div class="card-container" id="cardContainer"></div>
+        </div>
+    </div>
 
-  <div id="liveAlertPlaceholder" style="
+    <div id="liveAlertPlaceholder" style="
     margin-top: 50px;
     right: 0px;
     float: right;
@@ -202,117 +221,117 @@ span {cursor:pointer; }
     position: absolute;
     top: 15px;
 "></div>
-  <script>
-  // Function to logout the user
-  function logout() {
-    // Clear the 'userData' cookie by setting an expired date
-    document.cookie = 'userData=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    // Redirect the user to the login page
-    window.location.href = "/login"; // Change "/login" to the actual login page URL
-  }
-
-  window.onload = function() {
-    // Function to check if the user is logged in
-    function isLoggedIn() {
-      // Get all cookies
-      const cookies = document.cookie.split(';');
-      // Loop through each cookie to find userData
-      for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        // Check if the cookie contains 'userData'
-        if (cookie.startsWith('userData=')) {
-          // If 'userData' is found, parse it and check expiration time
-          const userDataString = cookie.substring('userData='.length, cookie.length);
-          const userData = JSON.parse(decodeURIComponent(userDataString));
-          const expirationTime = new Date(userData.expirationTime);
-          // Check if the expiration time is in the future
-          if (expirationTime > new Date()) {
-            return true; // Return true if the user is logged in
-          }
+    <script>
+        // Function to logout the user
+        function logout() {
+            // Clear the 'userData' cookie by setting an expired date
+            document.cookie = 'userData=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            // Redirect the user to the login page
+            window.location.href = "/login"; // Change "/login" to the actual login page URL
         }
-      }
-      return false; // Return false if 'userData' is not found or has expired
-    }
 
-    // Check if the user is logged in
-    if (!isLoggedIn()) {
-      // Redirect to home page if the user is logged in
-      {#window.location.href = "/";#}
-    }
-  }
-</script>
-<script>
-    function submitForm() {
+        window.onload = function () {
+            // Function to check if the user is logged in
+            function isLoggedIn() {
+                // Get all cookies
+                const cookies = document.cookie.split(';');
+                // Loop through each cookie to find userData
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Check if the cookie contains 'userData'
+                    if (cookie.startsWith('userData=')) {
+                        // If 'userData' is found, parse it and check expiration time
+                        const userDataString = cookie.substring('userData='.length, cookie.length);
+                        const userData = JSON.parse(decodeURIComponent(userDataString));
+                        const expirationTime = new Date(userData.expirationTime);
+                        // Check if the expiration time is in the future
+                        if (expirationTime > new Date()) {
+                            return true; // Return true if the user is logged in
+                        }
+                    }
+                }
+                return false; // Return false if 'userData' is not found or has expired
+            }
 
-                      const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-const appendAlert = (message, type) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>'
-  ].join('');
-  alertPlaceholder.innerText = '';
-  alertPlaceholder.append(wrapper)
-}
-      const email = document.getElementById('email').value;
+            // Check if the user is logged in
+            if (!isLoggedIn()) {
+                // Redirect to home page if the user is logged in
+                // window.location.href = "/";
+            }
+        }
+    </script>
+    <script>
+        function submitForm() {
 
-      const requestDetails = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({"emailid": email})
-      };
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            const appendAlert = (message, type) => {
+                const wrapper = document.createElement('div')
+                wrapper.innerHTML = [
+                    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                    `   <div>${message}</div>`,
+                    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                    '</div>'
+                ].join('');
+                alertPlaceholder.innerText = '';
+                alertPlaceholder.append(wrapper)
+            }
+            const email = document.getElementById('email').value;
 
-      fetch('/getticketdetails', requestDetails)
-        .then(response => {
-              if (!response.ok) {
-        return response.json().then((responsetext) => {
-            console.error(responsetext.message);
-            appendAlert(responsetext.message, 'danger');
-            throw new Error(responsetext.message);
-        });
-              }
-              else {
-                                return response.json();
-              }
-        })
-        .then(data => {
-          // Assuming the response data contains ticket details
-          // Now you can use this data to dynamically generate cards, as shown in the previous example
-          // For example:
-          const ticketsData = data; // Assuming the response contains ticket details
-          const cardContainer = document.getElementById('cardContainer');
-          cardContainer.innerHTML = ''; // Clear previous cards
+            const requestDetails = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ "emailid": email })
+            };
 
-          ticketsData.UserTickets.forEach(ticket => {
-            const card = document.createElement('div');
-            card.classList.add('card');
+            fetch('/getticketdetails', requestDetails)
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then((responsetext) => {
+                            console.error(responsetext.message);
+                            appendAlert(responsetext.message, 'danger');
+                            throw new Error(responsetext.message);
+                        });
+                    } else {
+                        return response.json();
+                    }
+                })
+                .then(data => {
+                    // Assuming the response data contains ticket details
+                    // Now you can use this data to dynamically generate cards, as shown in the previous example
+                    // For example:
+                    const ticketsData = data; // Assuming the response contains ticket details
+                    const cardContainer = document.getElementById('cardContainer');
+                    cardContainer.innerHTML = ''; // Clear previous cards
 
-            const cardBody = document.createElement('div');
-            cardBody.classList.add('card-body');
+                    ticketsData.UserTickets.forEach(ticket => {
+                        const card = document.createElement('div');
+                        card.classList.add('card');
 
-            const title = document.createElement('h5');
-            title.classList.add('card-title');
-            title.textContent = `Ticket ID: ${ticket.TicketID}`;
+                        const cardBody = document.createElement('div');
+                        cardBody.classList.add('card-body');
 
-            const text = document.createElement('p');
-            text.classList.add('card-text');
-            text.textContent = `Name: ${ticket.Name}, Entry Date: ${ticket.EntryDate}`;
+                        const title = document.createElement('h5');
+                        title.classList.add('card-title');
+                        title.textContent = `Ticket ID: ${ticket.TicketID}`;
 
-            cardBody.appendChild(title);
-            cardBody.appendChild(text);
-            card.appendChild(cardBody);
-            cardContainer.appendChild(card);
-          });
-        })
-        .catch(error => {
-          console.error('There was a problem with your fetch operation:', error);
-        });
-    }
-  </script>
+                        const text = document.createElement('p');
+                        text.classList.add('card-text');
+                        text.textContent = `Name: ${ticket.Name}, Entry Date: ${ticket.EntryDate}`;
 
-  </body>
+                        cardBody.appendChild(title);
+                        cardBody.appendChild(text);
+                        card.appendChild(cardBody);
+                        cardContainer.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('There was a problem with your fetch operation:', error);
+                });
+        }
+    </script>
+
+</body>
+
 </html>
